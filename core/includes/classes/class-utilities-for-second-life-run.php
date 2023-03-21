@@ -64,11 +64,8 @@ class Utilities_For_Second_Life_Run{
 	 * @return	void
 	 */
 	public function enqueue_frontend_scripts_and_styles() {
-		wp_enqueue_style( 'utilitiesf-frontend-styles', UTILITIESF_PLUGIN_URL . 'core/includes/assets/css/frontend-styles.css', array(), UTILITIESF_VERSION, 'all' );
-		wp_enqueue_script( 'utilitiesf-frontend-scripts', UTILITIESF_PLUGIN_URL . 'core/includes/assets/js/frontend-scripts.js', array( 'jquery' ), UTILITIESF_VERSION, false );
-		wp_localize_script( 'utilitiesf-frontend-scripts', 'utilitiesf', array(
-			'demo_var'   		=> __( 'This is some demo text coming from the backend through a variable within javascript.', 'utilities-for-second-life' ),
-		));
+		// Enqueue the Auto Link Processor
+		wp_enqueue_script( 'utilitiesf-frontend-scripts', UTILITIESF_PLUGIN_URL . 'core/includes/assets/js/SLURL.js', array( 'jquery' ), UTILITIESF_VERSION, false );
 	}
 
 }
