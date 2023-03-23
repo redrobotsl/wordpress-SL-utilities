@@ -86,6 +86,7 @@ if ( ! class_exists( 'Utilities_For_Second_Life' ) ) :
 
 				//Fire the plugin logic
 				new Utilities_For_Second_Life_Run();
+				new Utilities_For_Second_Life_Profile();
 
 				/**
 				 * Fire a custom action to allow dependencies
@@ -107,6 +108,7 @@ if ( ! class_exists( 'Utilities_For_Second_Life' ) ) :
 		private function includes() {
 			require_once UTILITIESF_PLUGIN_DIR . 'core/includes/classes/class-utilities-for-second-life-helpers.php';
 			require_once UTILITIESF_PLUGIN_DIR . 'core/includes/classes/class-utilities-for-second-life-settings.php';
+			require_once UTILITIESF_PLUGIN_DIR . 'core/includes/classes/class-utilities-for-second-life-profile.php';
 
 			require_once UTILITIESF_PLUGIN_DIR . 'core/includes/classes/class-utilities-for-second-life-run.php';
 		}
